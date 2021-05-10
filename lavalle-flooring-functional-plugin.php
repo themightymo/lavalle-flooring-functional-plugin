@@ -4,7 +4,7 @@
  * Plugin Name:       Lavalle Flooring Functionality
  * Plugin URI:        https://lavalleflooring.com
  * Description:       Custom functionality plugin for lavalleflooring.com (Reviews.io, Gravity Forms)
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            The Mighty Mo! WordPress Design
  * Author URI:        https://www.themightymo.com
  * License:           GPL-2.0+
@@ -296,7 +296,7 @@ function reviews_io (){
 	
 	            /* Product Reviews Settings */
 	            product_review: {
-	                sku:'0001',
+	                sku:'<?php echo (get_field('reviews_products_sku') ?: '0001'); ?>',
 	                enable_write_review:true,
 	                enable_smart_filters:true,
 	                enable_rating_filters:true,
